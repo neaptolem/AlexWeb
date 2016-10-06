@@ -1,0 +1,17 @@
+doctype html
+html(language="de")
+    head
+        title Alex Web Page
+        link(href="css/style.css", rel="stylesheet")
+body(id="page-top")
+    include ./includes/navbar.jade
+    include ./includes/header.jade
+    include ./includes/profil.jade
+    include ./includes/spektrum.jade
+    include ./includes/referenzen.jade
+    include ./includes/contact.jade
+    include ./includes/footer.jade
+    script(src="js/vendor.js")
+    script(type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDr8eygx3-7eY70blKgxlJ1YzcnbVGYCkE&callback=init")
+    script(src="js/index.js")
+    
