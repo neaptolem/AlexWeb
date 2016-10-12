@@ -1,9 +1,14 @@
 doctype html
-html(language="de")
+html(lang="de" xml:lang="de")
     head
+        meta(name="viewport" content="width=device-width, initial-scale=1")
         title Alex Web Page
         link(href="css/style.css", rel="stylesheet")
-body(id="page-top")
+        link(rel="icon" type="image/png" href="/img/logo.png")
+
+body
+    div(id="page_top")
+    include ./includes/impressum.jade
     include ./includes/navbar.jade
     include ./includes/header.jade
     include ./includes/profil.jade

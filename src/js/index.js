@@ -34,7 +34,7 @@ function init() {
 
 
 $('.navbar-collapse ul li a').click(function() {
-    if($(document).width()<=768){
+    if($(document).width()<=990){
     $(this).closest('.collapse').collapse('toggle');
     }
 });
@@ -54,3 +54,23 @@ $("#navbar a").on("click", function(){
    $(".nav").find(".active").removeClass("active");
    $(this).parent().addClass("active");
 });
+
+var modal = document.getElementById('ImpressumModal');
+
+var btn = document.getElementById("impressumBtn");
+
+var span = document.getElementsByClassName("close")[0];
+
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
