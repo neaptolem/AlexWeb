@@ -20,7 +20,6 @@ $("#navbar a").on("click", function(){
    $("#navbar").find(".active").removeClass("active");
    $(this).parent().addClass("active");
 });
-console.log('error');
 var modal = document.getElementById('ImpressumModal');
 
 var btn = document.getElementById("impressumBtn");
