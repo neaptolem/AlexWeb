@@ -43,26 +43,28 @@ gulp.task('browser-sync', ['stylesheets:stylus', 'templates','add-image','buildL
 				notify: false
 		});
 });
+
 gulp.task('add-image',function(){
     return gulp.src('./src/img/*')
-    .pipe(image())
     .pipe(gulp.dest('./dist/img'));
 });
+
 gulp.task('buildLib', function() {
   gulp.src(["./node_modules/jquery/dist/jquery.js","./node_modules/bootstrap/dist/js/bootstrap.js","./node_modules/jquery-easing/jquery.easing.1.3.js"])
   .pipe(concat('vendor.js'))
   .pipe(gulp.dest('./dist/js'));
 });
+
 gulp.task('buildJS', function() {
   gulp.src(['./src/js/index.js'])
   .pipe(concat('index.js'))
   .pipe(gulp.dest('./dist/js'));
 });
+
 gulp.task('addFonts', function() {
     gulp.src(['./node_modules/font-awesome/fonts/*','./node_modules/bootstrap/fonts/*'])
     .pipe(gulp.dest('./dist/fonts'));
 });
-
 
 gulp.task('default', ['clean'], function() {
     gulp.start('watch', 'browser-sync');
